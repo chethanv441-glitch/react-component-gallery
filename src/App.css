@@ -131,6 +131,8 @@ body {
 
 .card-header h3 {
   font-size: 1.25rem;
+  color: #2563eb;
+  font-size: 700;
 }
 
 .category-badge {
