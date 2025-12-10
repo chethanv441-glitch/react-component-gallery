@@ -2,47 +2,72 @@ import { useState } from "react";
 import "../../App.css";
 
 function FormDemo() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [submittedName, setSubmittedName] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (name.trim() && email.trim()) {
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 3000);
-    }
+
+    if (!formData.name.trim() || !formData.email.trim()) return;
+
+    setSubmittedName(formData.name.trim());
+
+    setSubmitted(true);
+
+    setFormData({ name: "", email: "", message: "" });
+
+    setTimeout(() => {
+      setSubmitted(false);
+      setSubmittedName("");
+    }, 5000);
   };
 
   return (
     <div className="contact-form-container">
       {submitted ? (
         <div className="form-success">
-          Thank you, <strong>{name}</strong>! We'll contact you soon.
+          <strong>Thank you, {submittedName || "there"}!</strong>
+          <p>We'll get back to you soon.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="contact-form">
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name}
+            onChange={handleChange}
             required
             className="form-input"
           />
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={handleChange}
             required
             className="form-input"
           />
           <textarea
+            name="message"
             placeholder="Your Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={formData.message}
+            onChange={handleChange}
             rows={4}
             className="form-textarea"
           />
