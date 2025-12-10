@@ -218,8 +218,13 @@ body {
 
   /* Todo List */
   .todo-controls {
-    flex-direction: column;
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
   }
+
   .todo-input {
     min-width: auto;
   }
@@ -688,4 +693,22 @@ body {
 /* Optional: Add a little pulse when toggled */
 .toggle-switch:active .toggle-slider {
   transform: scale(0.95);
+}
+
+@media (max-width: 640px) {
+  .todo-controls {
+    flex-direction: column; /* ← Stack vertically */
+    align-items: stretch; /* ← Full width buttons */
+  }
+
+  .todo-input {
+    min-width: auto !important;
+    width: 100%;
+  }
+
+  .todo-add-btn,
+  .todo-clear-btn {
+    width: 100% !important;
+    justify-content: center;
+  }
 }
