@@ -503,6 +503,7 @@ body {
   border-radius: 12px;
   background-color: #fafafa;
   transition: all 0.3s ease;
+  color: #000307;
 }
 
 .todo-input::placeholder {
