@@ -105,6 +105,31 @@ body {
   font-size: 0.875rem;
 }
 
+/* FIX: "No results" message not visible on mobile */
+.no-results {
+  grid-column: 1 / -1; /* ← Force it to span full width */
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #64748b;
+  font-size: 1.1rem;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  border: 2px dashed #cbd5e1;
+  margin: 1rem;
+}
+
+/* Extra safety for mobile */
+@media (max-width: 768px) {
+  .no-results {
+    font-size: 1.15rem;
+    padding: 4rem 1.5rem;
+    min-height: 300px; /* ← Prevents collapse on small screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
