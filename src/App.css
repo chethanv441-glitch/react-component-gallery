@@ -373,6 +373,7 @@ body {
 
 .profile-name {
   margin: 0.5rem 0;
+  color: #1e293b;
 }
 
 .profile-title {
@@ -399,6 +400,7 @@ body {
   margin-top: 1rem;
   text-align: left;
   font-size: 1rem;
+  color: #1e293b;
 }
 
 /* Contact Form Styles */
