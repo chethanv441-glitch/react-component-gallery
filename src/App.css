@@ -81,7 +81,7 @@ body {
 .filter-button {
   padding: 0.5rem 1rem;
   border: 2px solid #e2e8f0;
-  background-color: rgb(156, 236, 161);
+  background-color: rgb(158, 176, 191);
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
@@ -424,7 +424,7 @@ body {
 .form-textarea {
   width: 100%;
   padding: 0.875rem 1rem;
-  border: 2px solid #e2e8f0;
+  border: 1.5px solid #8193ab;
   border-radius: 12px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -499,7 +499,7 @@ body {
   min-width: 200px;
   padding: 0.875rem 1rem;
   font-size: 1rem;
-  border: 2px solid #e2e8f0;
+  border: 1.5px solid #7c9ec7;
   border-radius: 12px;
   background-color: #fafafa;
   transition: all 0.3s ease;
@@ -571,7 +571,7 @@ body {
   justify-content: space-between;
   padding: 1rem 1.25rem;
   background-color: #f8fafc;
-  border: 2px solid #e2e8f0;
+  border: 1.5px solid #89a5ca;
   border-radius: 12px;
   transition: all 0.2s ease;
 }
