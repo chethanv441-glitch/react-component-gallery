@@ -81,7 +81,7 @@ body {
 .filter-button {
   padding: 0.5rem 1rem;
   border: 2px solid #e2e8f0;
-  background-color: white;
+  background-color: rgb(156, 236, 161);
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
@@ -89,13 +89,13 @@ body {
 }
 
 .filter-button:hover {
-  background-color: #f8fafc;
+  background-color: #b2d1f0;
 }
 
 .filter-button.active {
-  background-color: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
+  background-color: #faf8f3;
+  color: rgb(27, 27, 28);
+  border-color: #9abcf2;
 }
 
 .gallery-results {
@@ -129,6 +129,8 @@ body {
 
 .card-header h3 {
   font-size: 1.25rem;
+  color: #3b82f6;
+  font-size: 700;
 }
 
 .category-badge {
@@ -187,6 +189,7 @@ body {
   .filter-button {
     padding: 0.5rem 0.8rem;
     font-size: 0.9rem;
+    color: #1e293b;
   }
 }
 
