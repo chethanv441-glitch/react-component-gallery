@@ -111,19 +111,19 @@ body {
   text-align: center;
   padding: 3rem 1rem;
   color: #64748b;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   background-color: #f8fafc;
   border-radius: 16px;
   border: 2px dashed #cbd5e1;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 /* Extra safety for mobile */
 @media (max-width: 768px) {
   .no-results {
     font-size: 1.15rem;
-    padding: 4rem 1.5rem;
-    min-height: 300px; /* ← Prevents collapse on small screens */
+    padding: 1rem 1rem;
+    min-height: 100px; /* ← Prevents collapse on small screens */
     display: flex;
     flex-direction: column;
     justify-content: center;
