@@ -2,10 +2,7 @@ import { useState } from "react";
 import "../../App.css";
 
 function TodoDemo() {
-  const [todos, setTodos] = useState<string[]>([
-    "Learn React fundamentals",
-    "Build a component gallery",
-  ]);
+  const [todos, setTodos] = useState<string[]>(["HTML", "CSS"]);
   const [inputValue, setInputValue] = useState("");
 
   const addTodo = () => {
