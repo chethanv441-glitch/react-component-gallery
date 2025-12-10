@@ -589,7 +589,6 @@ body {
   transform: translateX(48px);
 }
 
-/* Optional: Add a little pulse when toggled */
 .toggle-switch:active .toggle-slider {
   transform: scale(0.95);
 }
