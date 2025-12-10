@@ -110,11 +110,23 @@ body {
 }
 
 /* Component Card Styles */
+.component-card {
+  background-color: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 440px; /* ← INCREASED for mobile safety */
+  overflow: hidden; /* ← PREVENT overflow */
+}
 
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0; /* ← NEVER shrink title */
 }
 
 .card-header h3 {
@@ -128,11 +140,13 @@ body {
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .card-description {
   color: #64748b;
   font-size: 0.875rem;
+  flex-shrink: 0; /* ← Keep description visible */
 }
 
 .card-demo {
@@ -143,19 +157,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1; /* ← ADD THIS */
-  overflow-y: auto; /* ← ADD THIS - allows scrolling inside demo */
-}
-
-@media (max-width: 480px) {
-  .component-card {
-    min-height: 400px; /* ← ADD THIS */
-    padding: 1.25rem;
-  }
-
-  .card-header h3 {
-    font-size: 1.1rem !important;
-  }
+  flex-grow: 1; /* ← Grow to fill space */
+  overflow-y: auto; /* ← Scroll inside if content too tall */
 }
 
 /* RESPONSIVE DESIGN - IMPROVED */
@@ -188,6 +191,20 @@ body {
   .filter-button {
     padding: 0.5rem 0.8rem;
     font-size: 0.9rem;
+  }
+
+  /* CRITICAL FIX: Force minimum card height on small phones */
+  .component-card {
+    min-height: 480px !important; /* ← FINAL FIX for real phones */
+    padding: 1.25rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.15rem !important;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
   }
 }
 
@@ -657,7 +674,7 @@ body {
 }
 
 .toggle-switch.on {
-  background-color: #10b981; /* green when ON */
+  background-color: #10b981;
 }
 
 .toggle-switch.off {
@@ -684,16 +701,4 @@ body {
 /* Optional: Add a little pulse when toggled */
 .toggle-switch:active .toggle-slider {
   transform: scale(0.95);
-}
-
-.component-card {
-  background-color: white;
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  min-height: 380px; /* ← ADD THIS */
-  overflow: hidden; /* ← ADD THIS */
 }
