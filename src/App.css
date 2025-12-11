@@ -368,8 +368,7 @@ body {
   font-size: 1rem;
   transition: all 0.3s ease;
   background-color: #fafafa;
-  color: #000000 !important;
-
+  color: #000000;
 }
 
 .form-input:focus,
@@ -378,8 +377,7 @@ body {
   border-color: #3b82f6;
   background-color: white;
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-  color: #000000 !important;
- 
+  color: #000000;
 }
 
 .form-textarea {

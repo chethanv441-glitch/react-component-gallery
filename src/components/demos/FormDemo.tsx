@@ -52,6 +52,7 @@ function FormDemo() {
             value={formData.name}
             onChange={handleChange}
             required
+            autoComplete="off"
             className="form-input"
           />
           <input
@@ -61,6 +62,7 @@ function FormDemo() {
             value={formData.email}
             onChange={handleChange}
             required
+            autoComplete="off"
             className="form-input"
           />
           <textarea
