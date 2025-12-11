@@ -25,25 +25,30 @@ By completing this project, you will:
 4.	Implement Conditional Rendering - Show/hide UI based on state
 5.	Render Dynamic Lists - Display filtered and searched component lists
 6.	Practice Lifting State - Share state between sibling components
-Instructions
+
 Technical Requirements
+
 Core Features (Required)
 1.	Component Gallery Grid
-•	Display at least 6 different demo components
-•	Each component in a card with title, description, and category
-•	Responsive grid layout (1 column mobile, 2 tablet, 3 desktop)
+ •	Display at least 6 different demo components
+ •	Each component in a card with title, description, and category
+ •	Responsive grid layout (1 column mobile, 2 tablet, 3 desktop)
+
 2.	Category Filter
 •	Filter buttons for: All, Buttons, Forms, Cards, Data Display
 •	Active filter highlighted
 •	Update component list based on selected category
+
 3.	Search Bar
 •	Real-time search as user types
 •	Search by component name or description
 •	Case-insensitive matching
 •	Show "No results" message when nothing matches
+
 4.	Result Counter
 •	Display count: "Showing X of Y components"
 •	Update dynamically as filters change
+
 5.	Interactive Demo Components
 •	Counter with increment/decrement
 •	Simple form with validation
