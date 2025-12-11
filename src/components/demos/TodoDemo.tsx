@@ -26,7 +26,6 @@ function TodoDemo() {
 
   return (
     <div className="todo-container">
-      {/* Input + Add + Remove All Buttons */}
       <div className="todo-controls">
         <input
           type="text"
@@ -46,9 +45,8 @@ function TodoDemo() {
         )}
       </div>
 
-      {/* Todo List */}
       {todos.length === 0 ? (
-        <p className="todo-empty">No tasks yet. Add one above!</p>
+        <p className="todo-empty">No tasks added</p>
       ) : (
         <ul className="todo-list">
           {todos.map((todo, index) => (

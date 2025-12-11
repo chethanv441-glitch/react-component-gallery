@@ -14,13 +14,11 @@ function Gallery({ components }: GalleryProps) {
     "All"
   );
 
-  // FILTER
   const filteredComponents = useMemo(() => {
     return components.filter((comp) => {
       const matchesCategory =
         selectedCategory === "All" || comp.category === selectedCategory;
 
-      // Search filter (name OR description, case-insensitive)
       const matchesSearch =
         searchQuery.trim() === "" ||
         comp.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -35,7 +33,6 @@ function Gallery({ components }: GalleryProps) {
 
   return (
     <div className="gallery">
-      {/* Controls */}
       <div className="gallery-controls">
         <SearchBar value={searchQuery} onChange={setSearchQuery} />
         <CategoryFilter
@@ -44,7 +41,6 @@ function Gallery({ components }: GalleryProps) {
         />
       </div>
 
-      {/* Result Counter */}
       <div className="gallery-results">
         <p className="result-count">
           Showing {shownCount} of {totalCount} component
