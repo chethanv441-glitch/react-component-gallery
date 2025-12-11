@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+Assignment Description :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Build a comprehensive Interactive Component Gallery that demonstrates all the React fundamentals.
 
-Currently, two official plugins are available:
+What You'll Build :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+An interactive web application featuring:
 
-## React Compiler
+•	Component Showcase: Display 6+ demo components (Counter, Form, Card, Todo, Toggle, Color Picker)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+•	Category Filtering: Filter components by category (Buttons, Forms, Cards, Data Display)
 
-## Expanding the ESLint configuration
+•	Search Functionality: Real-time search by name or description
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+•	Responsive Design: Works on mobile, tablet, and desktop
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Learning Objectives
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+By completing this project, you will:
+1.	Apply Component Architecture - Create reusable, well-structured components
+2.	Manage Application State - Use useState effectively across multiple components
+3.	Handle User Events - Implement click, change, and submit handlers
+4.	Implement Conditional Rendering - Show/hide UI based on state
+5.	Render Dynamic Lists - Display filtered and searched component lists
+6.	Practice Lifting State - Share state between sibling components
+Instructions
+Technical Requirements
+Core Features (Required)
+1.	Component Gallery Grid
+•	Display at least 6 different demo components
+•	Each component in a card with title, description, and category
+•	Responsive grid layout (1 column mobile, 2 tablet, 3 desktop)
+2.	Category Filter
+•	Filter buttons for: All, Buttons, Forms, Cards, Data Display
+•	Active filter highlighted
+•	Update component list based on selected category
+3.	Search Bar
+•	Real-time search as user types
+•	Search by component name or description
+•	Case-insensitive matching
+•	Show "No results" message when nothing matches
+4.	Result Counter
+•	Display count: "Showing X of Y components"
+•	Update dynamically as filters change
+5.	Interactive Demo Components
+•	Counter with increment/decrement
+•	Simple form with validation
+•	Toggle button
+•	Card with expandable content
+•	List with add/remove items
+•	Color picker or theme selector
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
