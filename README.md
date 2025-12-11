@@ -6,6 +6,8 @@ What You'll Build :
 
 An interactive web application featuring:
 
+Live URL : https://react-component-gallery-chi.vercel.app/
+
 •	Component Showcase: Display 6+ demo components (Counter, Form, Card, Todo, Toggle, Color Picker)
 
 •	Category Filtering: Filter components by category (Buttons, Forms, Cards, Data Display)
