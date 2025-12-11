@@ -368,14 +368,16 @@ body {
   font-size: 1rem;
   transition: all 0.3s ease;
   background-color: #fafafa;
+  color: #030007;
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: #3b82f6;
+  background-color: white;
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-  color: #021409;
+  color: #000d05;
 }
 
 .form-textarea {
@@ -416,7 +418,6 @@ body {
 .form-success strong {
   color: #16a34a;
 }
-
 /* ================================================= */
 /*                  11. TODO LIST                    */
 /* ================================================= */
